@@ -1,0 +1,133 @@
+<section>
+    <% if(typeof medicine !== 'undefined') {%>
+     <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 mr-auto">
+            <div class="border text-center">
+              <img src=<%- medicine.productId.imageLink%> alt="Image" class="img-fluid p-5">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h2 class="text-black"><%- medicine.productId.name%></h2>
+            <!-- Ibuprofen Tablets, 200mg -->
+            <p>By <%-medicine.sellerName%> </p>
+            <!-- MICRO LABS -->
+            <p> <%-medicine.shortDescription%></p>
+            <!-- Strip of 15 tablets -->
+             
+              <p><del>Rs<%- medicine.productId.origPrice%></del>  <strong class="text-primary h4">$<%- medicine.productId.salePrice%></strong></p>
+              <p class="font-weight-bold">Delivery by <%- medicine.deliveryDate%> </p>
+              <!-- 14-15th May -->
+
+            
+            
+            <div class="mb-5">
+              <div class="input-group mb-3" style="max-width: 220px;">
+                <div class="input-group-prepend">
+                  <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
+                </div>
+                <input type="text" class="form-control text-center" value="1" placeholder=""
+                  aria-label="Example text with button addon" aria-describedby="button-addon1">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
+                </div>
+              </div>
+    
+            </div>
+            <p><a href="cart.html" class=" buy-now btn btn-sm height-auto px-4 py-3 btn-primary">Add To Cart</a></p>
+    
+            <div class="mt-5">
+              <ul class="nav nav-pills mb-3 custom-pill" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                    aria-controls="pills-home" aria-selected="true">Product Information</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+                    aria-controls="pills-profile" aria-selected="false">Additional Info</a>
+                </li>
+              
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                  <table class="table custom-table">
+                    <thead>
+                      <th>Type</th>
+                      <th>Description</th>
+                      <!-- <th>Packaging</th> -->
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Contains</th>
+                        <td>  <%-medicine.productInfo.contains%></td>
+                        <!-- <td>1 BT</td> -->
+<!-- Paracetamol / Acetaminophen(650.0 Mg) -->
+                      </tr>
+                      <tr>
+                        <th scope="row">Uses</th>
+                        <td> <%-medicine.productInfo.uses%></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Side effects</th>
+                        <td> <%-medicine.productInfo.sideEffects%></td>
+                        <!-- <td>144/CS</td> -->
+                      </tr>
+                      <tr>
+                        <th scope="row">Therapy</th>
+                        <td> <%-medicine.productInfo.therapy%></td>
+<!-- Pain and fever  Skin rash, itching, blisters ANALGESIC/ANTIPYRETIC-->
+                        <!-- <td>1 EA</td> -->
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+            
+                  <table class="table custom-table">
+            
+                    <tbody>
+                      <tr>
+                        <td>Contraindications</td>
+                        <td class="bg-light"><%-medicine.additionalInfo.contraindications%></td>
+                      </tr>
+                      <!-- If you are allergic to paracetamol or any ingredient of the Dolo 650 tablet.
+                        </p>If you are taking any other product containing paracetamol. -->
+                      <tr>
+                        <td>Directions for Use</td>
+                        <td class="bg-light"><%-medicine.additionalInfo. directionsForUse%></td>
+                        <!-- <p>Take the Dolo 650 tablet as a whole with a glass of water or as directed by your doctor. </p>
+                          Do not consume more than that recommended by your doctor. -->
+                      </tr>
+                      <tr>
+                        <td>Storage and disposal </td>
+                        <td class="bg-light"><%-medicine.additionalInfo.storageAndDisposal%></td>
+                      </tr>
+                      <!-- <p>Dolo 650 tablets should not be stored above 25°C.
+                          </p>Keep it out of the reach of children and pets. -->
+                      
+                      <tr>
+                        <td>Dosage </td>
+                        <td class="bg-light"><p>Overdose</p><p>
+                          <%-medicine.additionalInfo.dosage%>
+                           </td></tr>
+                           <!-- Symptoms of an overdose of Dolo 650 includes nausea, vomiting, loss of appetite and stomach ache. If you happen to take too much of the Dolo 650 tablet, reach out to your doctor or the nearest hospital immediately.
+                          </p>Missed a Dose<p>
+                          If you have missed a dose of the Dolo 650 tablet, then take it as soon as you remember. Keep a gap of at least 4-6 hours between this dose and the next dose. If it is almost time for the next dose, then skip the missed dose and continue with your regular dosing schedule.</p></td>
+                      -->
+                    </tbody>
+                  </table>
+            
+                </div>
+            
+              </div>
+            </div>
+
+    
+          </div>
+        </div>
+      </div>
+    </div>
+<% } %>
+</section>
